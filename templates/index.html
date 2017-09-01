@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+
+/* ===========================
+   ======= Body style ======== 
+   =========================== */
+
+body {
+	padding: 50px 100px;
+	font-size: 13px;
+	font-style: Verdana, Tahoma, sans-serif;
+}
+
+h2 {
+	margin-bottom: 20px;
+	color: #474E69;
+}
+
+/* ===========================
+   ====== Contact Form ======= 
+   =========================== */
+
+input, textarea {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;		
+}
+
+textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+.form label {
+	margin-left: 10px;
+	color: #999999;
+}
+
+/* ===========================
+   ====== Submit Button ====== 
+   =========================== */
+
+.submit input {
+	width: 100px; 
+	height: 40px;
+	background-color: #474E69; 
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;		
+}
+</style>
+
+
+<head>
+	<title>Send Multiple Emails </title>
+	
+	<meta charset="utf-8" />
+	
+	<link rel="stylesheet" href="/Users/Webyog/Documents/MyPythonprojects/SMTP_email/HTML/static/styles/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+
+	<h2>Send Multiple Emails </h2>
+	
+	<form class="form" method="POST" action="/send_mail">
+		
+		<p class="name">
+			<input type="email" name="to_address" id="to" placeholder="someone@something.com" />
+			<label for="name">To Address</label>
+		</p>
+		
+		<p class="text">
+			<input type="text" name="count" id="count" placeholder="total number emails " />
+			<label for="email">Count</label>
+		</p>
+		<select name="type_of_email">
+  			<option value="Plain_text" id="text">Plain_text</option>
+  	
+</select>
+		
+		<!--<p class="web">
+			<input type="text" name="web" id="web" placeholder="www.example.com" />
+			<label for="web">Website</label>
+		</p>		-->
+	
+		<p class="text">
+			<textarea name="text" placeholder="Copy paste your content here " /></textarea>
+		</p>
+
+		<p class "text">
+			<input type="text" placeholder="Status will update here" readonly>
+		
+		<p class="submit">
+			<input type="submit" value="Send" name="send_email"/>
+			made my Ankit Tiwari
+		</p>
+	</form>
+
+</body>
+
+</html>
+
